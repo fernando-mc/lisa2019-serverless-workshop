@@ -18,19 +18,8 @@ import {
 import "prismjs/components/prism-bash.min.js";
 import "prismjs/components/prism-jsx.min.js";
 
+import Game from "./Game.js"
 import Fernando from "./img/fernando.jpg";
-import Bored from "./img/bored.gif";
-import Nice from "./img/imnice.gif";
-import Trophy from "./img/trophy.gif";
-import BootstrapOne from "./img/bootstrap-p1.gif"
-import BootstrapTwo from "./img/bootstrap-p2.gif"
-import BootstrapThree from "./img/bootstrap-p3.gif"
-import BootstrapFour from "./img/bootstrap-p4.gif"
-import BootstrapFive from "./img/bootstrap-p5.gif"
-import RedeployOne from "./img/redeploy-p1.gif"
-import RedeployTwo from "./img/redeploy-p2.gif"
-import RedeployThree from "./img/redeploy-p3.gif"
-import NoIdeaDog from "./img/noideadog.gif"
 import ShowYourWork from "./img/showwork.gif"
 import GoogleTyping from "./img/typing-googlesearch.png"
 import RedshiftGoogle from "./img/redshift-google.png"
@@ -61,10 +50,7 @@ class App extends Component {
           <Subtitle
             style={{ color: "black" }}
           >
-            Making a Serverless Development Portfolio
-          </Subtitle>
-          <Subtitle style={{ color: "white" }}>
-            In 7 Days or Less
+            Creating Your First Serverless Application <br/>on AWS
           </Subtitle>
         </Slide>
         <Slide style={{ backgroundColor: "#FD5750" }}>
@@ -166,54 +152,7 @@ class App extends Component {
         >
           <Title>Game time.</Title>
         </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <Title>1</Title>
-              </div>
-              <div class="flip-card-back">
-                <Text>Ephemeral Compute - (FaaS)</Text>
-              </div>
-            </div>
-          </div>
-          <br/>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <Title>2</Title>
-              </div>
-              <div class="flip-card-back">
-                <Text>Managed Cloud Services - (BaaS)</Text>
-              </div>
-            </div>
-          </div>
-          <br/>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <Title>3</Title>
-              </div>
-              <div class="flip-card-back">
-                <Text>Not managing server security, scaling, patching, maintenance</Text>
-              </div>
-            </div>
-          </div>
-          <br/>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <Title>4</Title>
-              </div>
-              <div class="flip-card-back">
-                <Text>Focus on the application, not the infrastructure</Text>
-              </div>
-            </div>
-          </div>
-        </Slide>
+        <Game></Game>
         <Slide 
           style={{ backgroundColor: "#6F2D52" }}
           notes="5 minutes"
@@ -231,29 +170,31 @@ class App extends Component {
           style={{ backgroundColor: "#FD5750" }}
           notes=""
         >
-          <Title>Why a Portfolio?</Title>
+          <Title>Is Lambda for Everything!?</Title>
         </Slide>
         <Slide 
           style={{ backgroundColor: "#FD5750" }}
-          notes="I worked customer support | No one thought I could be a dev"
+          notes=""
         >
-          <Title>Jobs can get boring</Title>
-          <Image src={Bored} alt="Neil Patrick Harris spinning in his chair"/>
+          <Title>No!</Title>
         </Slide>
         <Slide 
           style={{ backgroundColor: "#FD5750" }}
-          notes="Getting good interviews was hard with no projects to show for it"
+          notes=""
         >
-          <Title>Interviewing is hard.</Title>
-          <Image src={Nice} alt="Andy from parks and rec saying that he is nice when asked what is great about him"/>
+          <Title>But.</Title>
         </Slide>
-
         <Slide 
           style={{ backgroundColor: "#FD5750" }}
-          notes="Last several jobs were because of my portfolio"
+          notes=""
         >
-          <Title>Portfolios Help.</Title>
-          <Image src={Trophy} alt="Celebrity holding a trophy and waving"/>
+          <Subtitle>A 'serverless mindset' can be useful to adopt.</Subtitle>
+        </Slide>
+        <Slide 
+          style={{ backgroundColor: "#FD5750" }}
+          notes=""
+        >
+          <Quote>Why do it myself when I could pay someone to do it better?</Quote>
         </Slide>
         <Slide 
           style={{ backgroundColor: "#00ACB5" }}
@@ -269,9 +210,8 @@ class App extends Component {
         >
           <List ordered>
             <li>I assume some development experience</li>
-            <li>You can't build something BIG in 7 days </li>
-            <li>You will need to learn new things!</li>
-            <li>50 lines of Python were used in the making of this talk</li>
+            <li>You may need to learn new things!</li>
+            <li>My horrible JavaScript skills were used in the making of this talk</li>
           </List>
         </Slide>
         <Slide 
@@ -285,401 +225,19 @@ class App extends Component {
           notes=""
         >
           <List ordered>
-            <li>Setting up your dev environment (Day 1)</li>
-            <li>Finding examples, templates (Day 2)</li>
-            <li>Coming up with Your Idea (Day 3)</li>
-            <li>Building your project (Day 4-6)</li>
-            <li>Showing off your project (Day 7)</li>
-          </List>
-        </Slide>
-        {/* DAY ONE */}
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Title>Day 1: <br></br> Setting Up</Title>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Title>Install Node & npm</Title>
-          <Text>
-            <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>
-          </Text>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Title>Create an AWS Account</Title>
-          <Text>
-            <a 
-              href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/"
-            >
-              Account Creation Process
-            </a>
-          </Text>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Subtitle>Install the <br></br>Serverless Framework</Subtitle>
-          <br></br><br></br>
-          <Code
-            code={
-              "npm install serverless -g"
-            }
-            lang="bash"
-          />
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Title>Demo Time!</Title>
-          <Subtitle>Creating a Basic API</Subtitle>
-          <List ordered>
-            <li><a href="/34">The demo went well!</a></li>
-            <li><a href="/26">The demo failed miserably!</a></li>
+            <li>Deploying Your First Serverless API Service</li>
+            <li>Deploying Your First Serverless Frontend</li>
+            <li>Adding Authentication to Our Frontend (If we have time)</li>
           </List>
         </Slide>
         <Slide 
           style={{ backgroundColor: "#00ACB5" }}
           notes=""
         >
-          <Subtitle>Create a Serverless Project</Subtitle>
-          <Image src={BootstrapOne} alt="A gif of the bootstrapping process"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Text>Setup a Serverless Dashboard Account:</Text>
-          <Image src={BootstrapTwo} alt="A gif of the bootstrapping process"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Text>Deploy a Serverless service:</Text>
-          <Image src={BootstrapThree} alt="A gif of deploying a simple service"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Text>Deploy a Serverless service:</Text>
-          <Image src={BootstrapFour} alt="A gif of deploying a simple service"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Text>Deploy a Serverless service:</Text>
-          <Image src={BootstrapFive} alt="A gif of deploying a simple service"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Text>Add a Public API Endpoint:</Text>
-          <Image src={RedeployOne} alt="Editing code to add an endpoint"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Image src={RedeployTwo} alt="Editing code to add an endpoint"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Text>Test the Public API Endpoint:</Text>
-          <Image src={RedeployThree} alt="Editing code to add an endpoint"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes="Be at 15 minutes"
-        >
-          <Subtitle>You've deployed an API!</Subtitle>
-        </Slide>
-        {/* DAY TWO */}
-        <Slide 
-          style={{ backgroundColor: "#FD5750" }}
-          notes="Search for 'node aws' or 'bot' or 'database'"
-        >
-          <Title>Day 2: <br></br> Finding Example Projects</Title>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#FD5750" }}
-          notes="Be cutting edge - try the latest and greatest"
-        >
-          <List ordered>
-            <li>
-              <a 
-                href="https://serverless.com/examples/"
-              >
-                Serverless Examples
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://serverless.com/blog/"
-              >
-                Serverless Blog
-              </a>
-            </li>
-            <li>Other Bloggers</li>
-            <li>Medium</li>
-            <li>Google</li>
-            <li>Free Courses!</li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#FD5750" }}
-          notes=""
-        >
-          <Browser url="https://serverless.com/examples/"></Browser>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#FD5750" }}
-          notes=""
-        >
-          <Browser url="https://serverless.com/blog/"></Browser>
-        </Slide>
-        
-        {/* DAY THREE */}
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes="17 minutes"
-        >
-          <Title style={{ color: "white" }}>
-            Day 3:
-          </Title>
-          <Subtitle style={{ color: "white" }}>
-            Coming up with Your Idea
-          </Subtitle>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Subtitle style={{ color: "white" }}>
-            Sometimes it feels like this:
-          </Subtitle>
-          <Image src={NoIdeaDog} alt="A dog floating in a spaceship with the text: I have no idea what I'm doing" />
-        </Slide>
-        
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Subtitle style={{ color: "white" }}>
-            To Start:
-          </Subtitle>
-          <List style={{ color: "white" }} ordered>
-            <li>Pick something interesting</li>
-            <li>Pick something small</li>
-            <li>Use familiar tools (not 2-3 new frameworks!)</li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Subtitle style={{ color: "white" }}>
-            Jump Starting Ideas:
-          </Subtitle>
-          <List style={{ color: "white" }} ordered>
-            <li>Get some real data</li>
-            <li>Find a cool API</li>
-            <li>Copy something cool (the idea, not the code)</li>
-            <li>Sketch something out</li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Subtitle style={{ color: "white" }}>
-            Some Data Sources:
-          </Subtitle>
-          <List style={{ color: "white" }} ordered>
-            <li>Data.gov</li>
-            <li>Academia</li>
-            <li>Generate it yourself!</li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Subtitle style={{ color: "white" }}>API References:</Subtitle>
-          <List style={{ color: "white" }} ordered>
-            <li>
-              <a 
-                href="https://github.com/public-apis/public-apis"
-              >Public APIs
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://github.com/chanonroy/cool-apis"
-              >
-                Fun APIs
-              </a>
-            </li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes="Be at 21 minutes"
-        >
-          <Title style={{ color: "white" }}>
-            An Example:
-          </Title>
-          <Subtitle style={{ color: "white" }}>The Color Scheme API</Subtitle>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <List style={{ color: "white" }} ordered>
-            <li>Get some beautiful images</li>
-            <li>Process them for dominant colors (using a library)</li>
-            <li>Make an API to return different color pallettes</li>
-            <li>Make a website to help demonstrate the API</li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Browser url="https://www.pexels.com/search/landscape/"/>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Code code={
-            `
-/* A photo's color scheme */
-rgb(192,192,192)
-rgb(255,215,0)
-rgb(128,128,0)
-            `} lang="css" 
-          />
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Code code={
-            `
-{
-  primary: "rgb(192,192,192)",
-  color1: "rgb(255,215,0)",
-  color2: "rgb(128,128,0)"
-}
-          `}
-          />
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes=""
-        >
-          <Browser url="https://serverlessfoo.com/projects/chameleon/index.html" />
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#6F2D52" }}
-          notes="
-          I love your ideas. SO... I think I heard you say: 
-          Make a site to vote on different songs?
-          Great!"
-        >
-          <Subtitle style={{ color: "white" }}>
-            Let's brainstorm ideas
-          </Subtitle>
-        </Slide>
-        
-        {/* DAY FOUR */}
-        <Slide 
-          style={{ backgroundColor: "#8AB274" }}
-          notes=""
-        >
-          <Title>
-            Day 4-6:
-          </Title>
+          <Title>Get the guide:</Title>
           <Subtitle>
-            Building a Real Project
+            <a href="http://tiny.cc/lisa19sls">http://tiny.cc/lisa19sls</a>
           </Subtitle>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#8AB274" }}
-          notes=""
-        >
-          <Subtitle>LibertyJS Jams</Subtitle>
-          <List ordered>
-            <li>Showcase some songs</li>
-            <li>See vote totals on each song</li>
-            <li>Sign into the site and vote</li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#8AB274" }}
-          notes=""
-        >
-          <Title>DEMO TIME!</Title>
-          <List>
-            <li>
-              <span><a href="/55">The demo went great</a></span>
-            </li>
-            <li>
-              <a href="http://www.serverlessjams.com.s3-website-us-east-1.amazonaws.com/">The demo went&nbsp;
-                <span 
-                  role="img" 
-                  aria-label="A grimacing face emoji">
-                     😬
-                </span>
-              </a>
-            </li>
-          </List>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#8AB274" }}
-          notes=""
-        >
-          <Subtitle>Honestly? I don't have a backup for this one.</Subtitle>
-        </Slide>
-
-        {/* DAY SEVEN */}
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes="Be at 30?"
-        >
-          <Title style={{ color: "#2B2B2D" }}>
-            Day 7:
-          </Title>
-          <Subtitle style={{ color: "#2B2B2D" }}>
-            Showing off your project
-          </Subtitle>
-        </Slide>
-        <Slide 
-          style={{ backgroundColor: "#00ACB5" }}
-          notes=""
-        >
-          <Subtitle style={{ color: "#2B2B2D" }}>
-            Where to show off your project?
-          </Subtitle>
-          <List style={{ color: "#2B2B2D" }} ordered>
-            <li>Your own website with a custom domain <br></br>($15/year on AWS)</li>
-            <li>GitHub (free hosting!)</li>
-            <li>GitHub Pages (free hosting!)</li>
-            <li>Netlify (free hosting!)</li>
-          </List>
         </Slide>
         <Slide 
           style={{ backgroundColor: "#00ACB5" }}
@@ -874,8 +432,7 @@ rgb(128,128,0)
             References:
           </Subtitle>
           <List style={{ color: "#2B2B2D" }} ordered>
-            <li>This Talk - tiny.cc/liberty7days</li>
-            <li>LibertyJS Jams Code - tiny.cc/libertyjams</li>
+            <li>The guide - http://tiny.cc/lisa19sls</li>
             <li>Get in touch - fernandomc.com/contact</li>
           </List>
         </Slide>
