@@ -27,7 +27,7 @@ import RedshiftAnalytics from "./img/redshift-ga.png"
 import ThankYou from "./img/thankyou.gif"
 
 class App extends Component {
-  static footer = <Footer left="@fmc_sea &nbsp;&nbsp;&nbsp;#LibertyJS2019" right="&nbsp;"/>;
+  static footer = <Footer left="@fmc_sea &nbsp;&nbsp;&nbsp;#LISA19" right="&nbsp;"/>;
   constructor() {
     super()
 
